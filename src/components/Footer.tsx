@@ -42,10 +42,24 @@ const Footer = () => {
           </nav>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-border text-center">
+        <div className="mt-8 pt-8 border-t border-border text-center space-y-3">
+          <div className="p-4 bg-background/50 border border-border">
+            <p className="text-xs text-muted-foreground font-medium mb-2">
+              Disclaimer
+            </p>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              This is an independent tribute website and is not affiliated with, 
+              endorsed by, or connected to Saab Automobile AB, NEVS, or any of their 
+              subsidiaries or successors. "Saab" and all related trademarks are the 
+              property of their respective owners.
+            </p>
+            <p className="text-xs text-muted-foreground leading-relaxed mt-2">
+              All vehicle images shown are artistic illustrations created for 
+              educational purposes and do not represent official Saab imagery.
+            </p>
+          </div>
           <p className="text-xs text-muted-foreground">
-            © {currentYear} UK Saab. All rights reserved. This is a tribute site 
-            and is not affiliated with Saab Automobile AB.
+            © {currentYear} UK Saab. All rights reserved.
           </p>
         </div>
       </div>
