@@ -5,6 +5,7 @@ import Models from "@/components/Models";
 import Legacy from "@/components/Legacy";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
         <About />
       </main>
       <Footer />
+      <CookieConsent />
     </div>
   );
 };
