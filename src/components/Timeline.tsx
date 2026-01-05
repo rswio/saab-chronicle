@@ -30,10 +30,40 @@ const timelineEvents = [
       "The Saab 900 becomes a global success, known for its safety innovations and distinctive design.",
   },
   {
-    year: "2011",
-    title: "End of an Era",
+    year: "1990",
+    title: "GM Partnership Begins",
     description:
-      "After 64 years, Saab automobile production ends. The brand lives on through its passionate community.",
+      "General Motors acquires 50% of Saab Automobile, beginning a new chapter of shared platforms and resources.",
+  },
+  {
+    year: "2000",
+    title: "Full GM Ownership",
+    description:
+      "GM purchases the remaining 50% of Saab. The 9-3 and 9-5 models continue but share more GM components.",
+  },
+  {
+    year: "2010",
+    title: "Spyker Acquisition",
+    description:
+      "Dutch supercar maker Spyker Cars purchases Saab from GM, attempting to revive the struggling brand.",
+  },
+  {
+    year: "2011",
+    title: "Production Halts",
+    description:
+      "Financial difficulties force Saab to halt production. The company files for bankruptcy in December.",
+  },
+  {
+    year: "2012",
+    title: "NEVS Takes Over",
+    description:
+      "National Electric Vehicle Sweden acquires Saab's assets, focusing on electric vehicle development.",
+  },
+  {
+    year: "Today",
+    title: "Living Legacy",
+    description:
+      "While new Saabs are no longer made, a passionate global community keeps the spirit alive through clubs and preservation.",
   },
 ];
 
