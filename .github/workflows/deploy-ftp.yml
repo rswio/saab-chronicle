@@ -24,7 +24,7 @@ jobs:
         run: npm run build
 
       - name: Deploy via FTP
-        if: ${{ secrets.FTP_SERVER }}
+        if: ${{ secrets.FTP_SERVER && secrets.FTP_USERNAME && secrets.FTP_PASSWORD }}
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
