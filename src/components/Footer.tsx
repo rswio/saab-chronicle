@@ -42,7 +42,24 @@ const Footer = () => {
           </nav>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-border text-center space-y-3">
+        <div className="mt-8 pt-8 border-t border-border text-center space-y-4">
+          <div className="p-4 bg-background/50 border border-border">
+            <p className="text-xs text-muted-foreground font-medium mb-2">
+              Contribute
+            </p>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              If you're comfortable with code and would like to contribute to this project, 
+              you can help by making edits, creating issues, or joining the discussions on our{" "}
+              <a 
+                href="https://github.com/rswio/saab-chronicle" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                GitHub repository
+              </a>.
+            </p>
+          </div>
           <div className="p-4 bg-background/50 border border-border">
             <p className="text-xs text-muted-foreground font-medium mb-2">
               Disclaimer
