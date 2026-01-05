@@ -1,14 +1,24 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9JX1RKV4X8"></script>
+    <!-- Google tag (gtag.js) - Only loads if consent given -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-9JX1RKV4X8');
+      
+      function loadGoogleAnalytics() {
+        if (localStorage.getItem('cookie-consent') === 'accepted') {
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-9JX1RKV4X8';
+          document.head.appendChild(script);
+          gtag('js', new Date());
+          gtag('config', 'G-9JX1RKV4X8');
+        }
+      }
+      
+      // Load GA if already consented
+      loadGoogleAnalytics();
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
