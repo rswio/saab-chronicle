@@ -58,9 +58,6 @@ const Footer = () => {
               educational purposes and do not represent official Saab imagery.
             </p>
           </div>
-          <p className="text-xs text-muted-foreground">
-            © {currentYear} UK Saab. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>
