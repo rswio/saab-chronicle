@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
+declare global {
+  interface Window {
+    loadGoogleAnalytics: () => void;
+  }
+}
+
 const CookieConsent = () => {
   const [showBanner, setShowBanner] = useState(false);
 
@@ -14,13 +20,15 @@ const CookieConsent = () => {
   const handleAccept = () => {
     localStorage.setItem("cookie-consent", "accepted");
     setShowBanner(false);
+    // Load Google Analytics after consent
+    if (window.loadGoogleAnalytics) {
+      window.loadGoogleAnalytics();
+    }
   };
 
   const handleDecline = () => {
     localStorage.setItem("cookie-consent", "declined");
     setShowBanner(false);
-    // Disable Google Analytics if declined
-    window.location.reload();
   };
 
   if (!showBanner) return null;
