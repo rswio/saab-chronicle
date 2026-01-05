@@ -43,21 +43,21 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-border text-center space-y-4">
-          <div className="p-4 bg-background/50 border border-border">
-            <p className="text-xs text-muted-foreground font-medium mb-2">
-              Contribute
+          <div className="p-5 bg-primary/10 border border-primary/30 rounded-lg">
+            <p className="text-sm text-primary font-semibold mb-2">
+              Want to Contribute?
             </p>
-            <p className="text-xs text-muted-foreground leading-relaxed">
-              If you're comfortable with code and would like to contribute to this project, 
-              you can help by making edits, creating issues, or joining the discussions on our{" "}
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              If you're comfortable with code and would like to help improve this project, 
+              you can contribute by making edits, creating issues, or joining the discussions on our{" "}
               <a 
                 href="https://github.com/rswio/saab-chronicle" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-primary hover:underline"
+                className="text-primary font-medium hover:underline"
               >
-                GitHub repository
-              </a>.
+                GitHub repository →
+              </a>
             </p>
           </div>
           <div className="p-4 bg-background/50 border border-border">
