@@ -1,14 +1,9 @@
-User-agent: Googlebot
-Allow: /
+# robots.txt for Saab Chronicle
+# This file follows best practices for search engine optimization
 
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# Allow all search engines to crawl all pages
 User-agent: *
 Allow: /
+
+# Sitemap location (uncomment when sitemap is available)
+# Sitemap: /sitemap.xml
