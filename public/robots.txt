@@ -5,5 +5,5 @@
 User-agent: *
 Allow: /
 
-# Sitemap location (uncomment and update with actual domain when sitemap is available)
-# Sitemap: https://YOUR_DOMAIN_HERE/sitemap.xml
+# Sitemap location (uncomment when sitemap is available)
+# Sitemap: /sitemap.xml
