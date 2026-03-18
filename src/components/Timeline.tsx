@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react";
+
 const timelineEvents = [
   {
     year: "1937",
@@ -18,16 +20,22 @@ const timelineEvents = [
       "The Saab 92 enters production, featuring a two-stroke engine and distinctive teardrop shape.",
   },
   {
+    year: "1958",
+    title: "Safety Leadership",
+    description:
+      "Saab becomes the first manufacturer to fit standard front seatbelts across its entire range — years ahead of legislation requiring them.",
+  },
+  {
     year: "1978",
     title: "Turbo Revolution",
     description:
-      "Saab introduces the 99 Turbo, pioneering turbocharging technology for everyday road cars.",
+      "Saab introduces the 99 Turbo, pioneering turbocharging technology for everyday road cars and changing the industry.",
   },
   {
     year: "1984",
-    title: "Iconic 900 Series",
+    title: "Iconic 900 & 9000",
     description:
-      "The Saab 900 becomes a global success, known for its safety innovations and distinctive design.",
+      "The Saab 900 reaches peak popularity while the flagship 9000 launches, jointly developed with Fiat, Lancia and Alfa Romeo on the Type Four platform.",
   },
   {
     year: "1990",
@@ -63,11 +71,32 @@ const timelineEvents = [
     year: "Today",
     title: "Living Legacy",
     description:
-      "While new Saabs are no longer made, a passionate global community keeps the spirit alive through clubs and preservation.",
+      "While new Saabs are no longer made, a passionate global community keeps the spirit alive through clubs, preservation, and the Saab Owners Club of Great Britain.",
   },
 ];
 
 const Timeline = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const items = containerRef.current?.querySelectorAll<HTMLElement>(".timeline-item");
+    if (!items) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    items.forEach((item) => observer.observe(item));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="history" className="py-24 bg-card">
       <div className="container mx-auto px-6">
@@ -80,14 +109,14 @@ const Timeline = () => {
           </h2>
         </div>
 
-        <div className="relative max-w-4xl mx-auto">
+        <div ref={containerRef} className="relative max-w-4xl mx-auto">
           {/* Timeline Line */}
           <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2" />
 
           {timelineEvents.map((event, index) => (
             <div
               key={event.year}
-              className={`relative flex flex-col md:flex-row items-start md:items-center gap-8 mb-16 last:mb-0 ${
+              className={`timeline-item relative flex flex-col md:flex-row items-start md:items-center gap-8 mb-16 last:mb-0 ${
                 index % 2 === 0 ? "md:flex-row-reverse" : ""
               }`}
             >
